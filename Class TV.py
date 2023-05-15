@@ -15,7 +15,11 @@ class TV:
     def turnOff(self):
         self.off = False
     #Get Channel
+    def getChannel(self):
+        return self.getChannel
     #Set Channel
+    def setChannel(self, newChannel):
+        self.setChannel = newChannel
     #Get Volume
     #Set Volume
     #Channel Up
