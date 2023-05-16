@@ -41,19 +41,3 @@ class TV:
     #Volume Down
     def volumeDown(self, amount):
         self.volume -= amount
-
-#Test
-def TestTV():
-    tv1 = TV()
-    tv1.setChannel(30)
-    tv1.setVolume(3)
-    print(tv1.getChannel())
-    print(tv1.getVolume())
-
-    tv2 = TV()
-    tv2.setChannel(3)
-    tv2.setVolume(2)
-    print(tv2.getChannel())
-    print(tv2.getVolume())
-
-TestTV()
