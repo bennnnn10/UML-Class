@@ -1,4 +1,27 @@
+import tkinter as tk
+import pyfiglet
+
 from ClassTV import TV
+
+def turn_on():
+    television.destroy()
+
+#Television title using pyfiglet
+television_title = pyfiglet.figlet_format("Television", font="starwars", width=100)
+
+television = tk.Tk()
+television.title("Television")
+television.configure(bg="#F0F0F0")    #Background color
+frame = tk.Frame(television, padx=50, pady=50, bg="#F0F0F0")    #Frame
+frame.pack()
+label = tk.Label(frame, text=television_title, font=("Courier", 24), bg="#F0F0F0")  #Label for television title
+label.pack()
+
+#Create button
+button = tk.Button(frame, text="Turn On", width=10, height=2, command=turn_on, bg="#FF5500", fg="white")
+button.pack(pady=20)
+
+television.mainloop()
 
 #Test Driver Program
 def TestTV():
