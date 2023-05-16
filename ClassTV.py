@@ -14,6 +14,19 @@ class TV:
     #Turns OFF this TV
     def turnOff(self):
         self.off = False
+    #Print Status
+    def printStatus(self):
+        if self.on:
+            return "TV 1 is on."
+        else:
+            return "TV is off."
+        
+    def printStatus2(self):
+        if self.on:
+            return "TV 2 is on."
+        else:
+            return "TV is off."
+        
     #Get Channel
     def getChannel(self):
         return self.channel
