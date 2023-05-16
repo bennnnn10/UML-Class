@@ -17,15 +17,15 @@ class TV:
     #Print Status
     def printStatus(self):
         if self.on:
-            return "TV 1 is on."
+            return "\033[;33;1;3mTV 1 is on.\033[0m\n"
         else:
-            return "TV is off."
+            return "\033[;33;1;3mTV is off.\033[0m\n"
         
     def printStatus2(self):
         if self.on:
-            return "TV 2 is on."
+            return "\033[;33;1;3mTV 2 is on.\033[0m\n"
         else:
-            return "TV is off."
+            return "\033[;33;1;3mTV is off.\033[0m\n"
         
     #Get Channel
     def getChannel(self):

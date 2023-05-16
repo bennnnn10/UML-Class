@@ -1,3 +1,5 @@
+import time
+from tqdm import tqdm
 import tkinter as tk
 import pyfiglet
 
@@ -25,6 +27,14 @@ television.mainloop()
 
 #Test Driver Program
 def TestTV():
+
+    print("░" * 80)
+    print()
+    for i in tqdm(range(100), desc="\033[;96;1;3mLoading...\033[0m", ascii=False, ncols=75):
+        time.sleep(0.01)
+    print()
+    print("░" * 80)
+    print()
     #Class TV 1
     tv1 = TV()
     #Set TV 1's channel and volume
@@ -32,10 +42,20 @@ def TestTV():
     tv1.setVolume(3)
     tv1.turnOn()
     #Print the output
-    print(tv1.printStatus())
-    print("tv1's channel is", tv1.getChannel(), "and volume level is", tv1.getVolume())
+    print(tv1.printStatus().center(93))
+    print("■" * 80)
+    print("                  tv1's channel is", tv1.getChannel(), "and volume level is", tv1.getVolume())
+    print("■" * 80)
     print()
 
+    print("\n")
+    print("░" * 80)
+    print()
+    for i in tqdm(range(100), desc="\033[;96;1;3mLoading...\033[0m", ascii=False, ncols=75):
+        time.sleep(0.01)
+    print()
+    print("░" * 80)
+    print()
     #Class TV 2
     tv2 = TV()
     #Set TV 2's channel and volume
@@ -43,8 +63,10 @@ def TestTV():
     tv2.setVolume(2)
     tv2.turnOn()
     #Print the output
-    print(tv2.printStatus2())
-    print("tv2's channel is", tv2.getChannel(), "and volume level is", tv2.getVolume())
+    print(tv2.printStatus2().center(93))
+    print("■" * 80)
+    print("                  tv2's channel is", tv2.getChannel(), "and volume level is", tv2.getVolume())
+    print("■" * 80)
     print()
 
 #For the test cases to be executed, execute the TestTV function.
