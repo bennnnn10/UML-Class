@@ -16,16 +16,16 @@ class TV:
         self.off = False
     #Get Channel
     def getChannel(self):
-        return self.getChannel
+        return self.channel
     #Set Channel
     def setChannel(self, newChannel):
-        self.setChannel = newChannel
+        self.channel = newChannel
     #Get Volume
     def getVolume(self):
-        return self.getVolume
+        return self.volume
     #Set Volume
     def setVolume(self, newVolume):
-        self.setVolume = newVolume
+        self.volume = newVolume
     #Channel Up
     def channelUp(self):
         self.channel += 1
